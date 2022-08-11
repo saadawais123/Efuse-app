@@ -1,6 +1,7 @@
 const PostModel = require("../models/Posts");
 
 exports.addPost = async (req, res, next) => {
+  console.log("req.body", req.body);
   const post = new PostModel({
     title: req.body.title,
     content: req.body.content,

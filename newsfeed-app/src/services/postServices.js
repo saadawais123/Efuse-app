@@ -27,8 +27,9 @@ export const editPost = async (postId, { content, likes, comments }) => {
     console.log("err", err.message);
   }
 };
-export const addPost = async ({ content }) => {
+export const addPost = async (content) => {
   try {
+    console.log("add post", content);
     const response = await axios.post(`${BASE_URL}/posts`, {
       content,
       title: "New Post",
