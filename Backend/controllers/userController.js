@@ -37,6 +37,7 @@ exports.getUser = async (req, res, next) => {
 exports.getPostsOfUsers = async (req, res, next) => {
   const userId = req.params.userId;
   PostModel.find({ userId: userId })
+    .populate("userId")
     .then((Post) => res.json(Post).status(200))
     .catch((err) => res.send(err.message).status(400));
 };
