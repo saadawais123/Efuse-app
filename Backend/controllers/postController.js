@@ -35,7 +35,7 @@ exports.addComment = async (req, res, next) => {
   console.log("here in comments");
   const postId = req.params.postId;
   const comment = {
-    Comment: req.body.coment,
+    Comment: req.body.comment,
     userId: req.body.userId,
     like: 0,
     createdAt: new Date().toISOString(),

@@ -224,7 +224,7 @@ const PostCard = ({
                           paddingBottom: "5px",
                         }}
                       >
-                        Comment
+                        {comment.Comment}
                       </Typography>
                       <Box
                         display={"flex"}
