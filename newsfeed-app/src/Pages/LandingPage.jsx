@@ -43,8 +43,15 @@ function LandingPage() {
   useEffect(() => {
     getPosts();
   }, []);
+
   return (
-    <Grid container>
+    <Grid
+      container
+      alignItems="center"
+      direction="column"
+      columnSpacing={{ xs: 1, sm: 1, md: 1, lg: 10 }}
+      style={{ backgroundColor: "#dae1ea" }}
+    >
       <AddPost onAddNewPost={addNewPost}></AddPost>
       {posts &&
         posts.map((post) => {
@@ -55,6 +62,7 @@ function LandingPage() {
               likes={post.likes}
               comments={post.comments}
               postId={post._id}
+              userId={post.userId}
               onCommentAdd={onCommentAdd}
               addLikeToPost={onAddLike}
             />
